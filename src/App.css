@@ -1,3 +1,15 @@
+
+.navCreate {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px 0;
+}
+
+.navCreate > img {
+  padding-right: 20px;
+  border-right: 2px solid #ececec;
+
 .thuong-bg-img {
 	background-image: url("https://images.squarespace-cdn.com/content/v1/5dfbe1b879e00e7ea2ded3a5/1590448648533-7LXMTN5SC50VPPOXJQ63/ke17ZwdGBToddI8pDm48kHhmc2ayRjfkqzzA3BlTcpx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UfiyOED3tH8_ODs9gahxcdtuvKSGkJKZsqbSNqI2pGLwOkP6OPUJ_r7YU8TZ7Q11dw/topbanner-ipad.jpg?format=2500w");
 	height: 680px;
@@ -12,10 +24,69 @@
 .thuong-container {
 	position: absolute;
 	width: 100%;
-}
+
 /* * {
 	border: 1px solid red;
 } */
+
+.navCreate > span {
+  padding-left: 20px;
+  color: #646464;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.createForm {
+  width: 50%;
+  margin-top: 20px;
+}
+
+.createForm > h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.createLabel {
+  margin-top: 20px;
+}
+
+.createInput {
+  width: 100%;
+}
+
+.categoryRow {
+  margin-top: 20px;
+}
+
+.priceRow {
+  margin-top: 20px;
+}
+
+.createBtn {
+  margin: 30px 0;
+  padding: 10px 20px;
+  background: #ff595e;
+  border: 1px solid #ff595e;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+}
+
+.detailBody {
+  background-color: black;
+  height: 100%;
+}
+
+.detailInfo {
+  padding-top: 50px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.detailInfo > h3 {
+  padding-top: 10px;
+  font-size: 24px;
+  font-weight: 300;
 
 /* The navbar */
 .thuong-topnav {
@@ -143,4 +214,49 @@
 .check-box1 {
 	padding-left: 20px;
 	font-style: italic;
+}
+
+.detailBadgeList {
+  margin-top: 20px;
+}
+
+.detailBadge {
+  padding: 10px 20px;
+  background-color: #262626 !important;
+}
+
+.durationList {
+  display: inline-flex;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 40px;
+}
+
+.durationList > li {
+  margin-right: 40px;
+  font-size: 16px;
+  color: white;
+}
+
+.durationList > li > i {
+  margin-bottom: 15px;
+  color: #A7A7A7;
+}
+
+.durationList > li > div > span {
+  color: #A7A7A7;
+}
+
+.detailDesc {
+  margin-top: 30px;
+}
+
+.detailDesc > h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.detailDesc > p {
+  margin-top: 15px;
+  font-size: 18px;
 }
