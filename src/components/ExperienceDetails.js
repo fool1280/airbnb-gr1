@@ -6,6 +6,20 @@ const ExperienceDetails = () => {
   return (
     <div className="detailBody">
       <Container>
+        <Row className="navDetails">
+          <Col>
+            <img alt="logo" src="/images/airbnb-logo.png" height="35" />
+          </Col>
+          <Col className="loginNavSearch">
+            <span>
+              <i class="fas fa-search"></i>
+            </span>
+            <input type="text" placeholder="Search" />
+          </Col>
+          <Col className="loginBtnMainCol">
+            <button className="loginBtnMain">Sign In</button>
+          </Col>
+        </Row>
         <Row className="detailRow">
           <Col>
             <img src="https://a0.muscache.com/im/pictures/lombard/MtTemplate-1746293-media_library/original/75578928-27fe-4055-bc50-5ee36ffae190.jpeg?aki_policy=exp_md" />
@@ -35,6 +49,14 @@ const ExperienceDetails = () => {
                 </div>
               </li>
               <li>
+                <i class="fas fa-comments"></i>
+                <div>
+                  <span>Hosted in</span>
+                  <br />
+                  English, Italian
+                </div>
+              </li>
+              <li>
                 <i class="fas fa-dollar-sign"></i>
                 <div>
                   <span>Price</span>
@@ -59,6 +81,11 @@ const ExperienceDetails = () => {
           </Col>
         </Row>
       </Container>
+      <div className="detailFooter">
+        <Container>
+          <h6>Michelin Star Chef - Christina Bowerman</h6>
+        </Container>
+      </div>
     </div>
   );
 };
