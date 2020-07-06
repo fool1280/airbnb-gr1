@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
 import { Container, Row, Col, Badge } from "react-bootstrap";
 
@@ -17,7 +18,9 @@ const ExperienceDetails = () => {
             <input type="text" placeholder="Search" />
           </Col>
           <Col className="loginBtnMainCol">
-            <button className="loginBtnMain">Sign In</button>
+            <Link to="/create">
+              <button className="loginBtnMain">Create Experience</button>
+            </Link>
           </Col>
         </Row>
         <Row className="detailRow">
@@ -56,14 +59,6 @@ const ExperienceDetails = () => {
                   English, Italian
                 </div>
               </li>
-              <li>
-                <i class="fas fa-dollar-sign"></i>
-                <div>
-                  <span>Price</span>
-                  <br />
-                  $70/person
-                </div>
-              </li>
             </ul>
             <div className="detailDesc">
               <h2>What you'll do</h2>
@@ -83,7 +78,15 @@ const ExperienceDetails = () => {
       </Container>
       <div className="detailFooter">
         <Container>
-          <h6>Michelin Star Chef - Christina Bowerman</h6>
+          <Row className="detailFooterRow">
+            <Col className="detailFooterLeftCol">
+              <h6>Michelin Star Chef - Christina Bowerman</h6>
+            </Col>
+            <Col className="detailFooterRightCol">
+              <span>From $70/person</span>
+              <button className="detailDateBtn">See Dates</button>
+            </Col>
+          </Row>
         </Container>
       </div>
     </div>
