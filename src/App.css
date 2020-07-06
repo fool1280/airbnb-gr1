@@ -9,6 +9,7 @@
 .navCreate > img {
   padding-right: 20px;
   border-right: 2px solid #ececec;
+}
 
 .thuong-bg-img {
 	background-image: url("https://images.squarespace-cdn.com/content/v1/5dfbe1b879e00e7ea2ded3a5/1590448648533-7LXMTN5SC50VPPOXJQ63/ke17ZwdGBToddI8pDm48kHhmc2ayRjfkqzzA3BlTcpx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UfiyOED3tH8_ODs9gahxcdtuvKSGkJKZsqbSNqI2pGLwOkP6OPUJ_r7YU8TZ7Q11dw/topbanner-ipad.jpg?format=2500w");
@@ -23,7 +24,8 @@
 /* Position the navbar container inside the image */
 .thuong-container {
 	position: absolute;
-	width: 100%;
+  width: 100%;
+}
 
 /* * {
 	border: 1px solid red;
@@ -77,8 +79,11 @@
   height: 100%;
 }
 
+.detailRow {
+  margin-top: 30px;
+}
+
 .detailInfo {
-  padding-top: 50px;
   font-family: 'Roboto', sans-serif;
   color: white;
 }
@@ -87,6 +92,7 @@
   padding-top: 10px;
   font-size: 24px;
   font-weight: 300;
+}
 
 /* The navbar */
 .thuong-topnav {
@@ -221,7 +227,7 @@
 }
 
 .detailBadge {
-  padding: 10px 20px;
+  padding: 10px 15px !important;
   background-color: #262626 !important;
 }
 
@@ -259,4 +265,58 @@
 .detailDesc > p {
   margin-top: 15px;
   font-size: 18px;
+}
+
+.navDetails {
+  padding: 20px 0;
+}
+
+.loginBtnMainCol {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.loginBtnMain {
+  font-family: 'Roboto', sans-serif;
+  padding: 10px 20px;
+  background-color: #262626;
+  border: 1px solid #262626;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.loginBtnMain:hover {
+  cursor: pointer;
+}
+
+.loginNavSearch {
+  display: flex;
+  justify-content: center;
+}
+
+.loginNavSearch > input {
+  border-radius: 20px;
+  padding-left: 40px;
+  padding-right: 10px;
+  background-color: #262626;
+  border: 1px solid #262626;
+  color: white;
+}
+
+.loginNavSearch > span > i {
+  position: absolute;
+  padding-top: 16px;
+  padding-left: 20px;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.detailFooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  padding: 10px 0;
 }
