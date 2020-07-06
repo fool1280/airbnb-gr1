@@ -81,6 +81,7 @@
 
 .detailRow {
   margin-top: 30px;
+  padding-bottom: 60px;
 }
 
 .detailInfo {
@@ -287,10 +288,6 @@
   font-weight: 600;
 }
 
-.loginBtnMain:hover {
-  cursor: pointer;
-}
-
 .loginNavSearch {
   display: flex;
   justify-content: center;
@@ -314,9 +311,38 @@
 }
 
 .detailFooter {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: black;
-  padding: 10px 0;
+  padding: 20px 0; 
+}
+
+.detailFooterRow {
+  color: white;
+}
+
+.detailFooterLeftCol {
+  display: flex;
+  align-items: center;
+}
+
+.detailFooterLeftCol > h6 {
+  font-size: 14px;
+}
+
+.detailFooterRightCol {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.detailDateBtn {
+  margin-left: 20px;
+  background-color: #ff595e;
+  border: 1px solid #ff595e;
+  border-radius: 5px;
+  padding: 10px 40px;
+  color: white;
+  font-weight: 600;
 }
