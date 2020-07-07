@@ -8,20 +8,24 @@ import Popover from "react-bootstrap/Popover";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Pagination } from "react-bootstrap";
 
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
 export default function ExperiencesList() {
     const [exps, setExps] = useState(null);
+    const [page, setPage] = useState(1);
+    const [count, setCount] = useState(null);
     useEffect(() => {
         async function fetchData() {
             let url =
                 proxyurl +
-                "https://airbnb-gr1-backend.herokuapp.com/experiences";
+                `https://airbnb-gr1-backend.herokuapp.com/experiences?page=${page}`;
             const data = await fetch(url, {
                 method: "GET",
             });
             const result = await data.json();
+            console.log(result);
             setExps(result.data);
         }
         fetchData();
@@ -248,7 +252,11 @@ export default function ExperiencesList() {
 
             <div>
                 <h2 className="thuong-text-popular">Popular now</h2>
-                <div>
+                <div className="d-flex flex-column align-items-center">
+                    <Pagination>
+                        <Pagination.Prev />
+                        <Pagination.Next />
+                    </Pagination>
                     {content.map((arr, index) => (
                         <div key={index}>
                             <div className="thuong-list-activities">
