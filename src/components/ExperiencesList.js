@@ -10,26 +10,24 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Pagination } from "react-bootstrap";
 
-const proxyurl = "https://cors-anywhere.herokuapp.com/";
-
 export default function ExperiencesList() {
     const [exps, setExps] = useState(null);
     const [page, setPage] = useState(1);
     const [count, setCount] = useState(null);
+    console.log(count);
     useEffect(() => {
         async function fetchData() {
-            let url =
-                proxyurl +
-                `https://airbnb-gr1-backend.herokuapp.com/experiences?page=${page}`;
+            let url = `https://cors-anywhere.herokuapp.com/https://airbnb-gr1-backend.herokuapp.com/experiences?page=${page}`;
             const data = await fetch(url, {
                 method: "GET",
             });
             const result = await data.json();
             console.log(result);
+            setCount(result.count);
             setExps(result.data);
         }
         fetchData();
-    }, []);
+    }, [page]);
     if (!exps) {
         return <div>Loading...</div>;
     }
@@ -254,8 +252,18 @@ export default function ExperiencesList() {
                 <h2 className="thuong-text-popular">Popular now</h2>
                 <div className="d-flex flex-column align-items-center">
                     <Pagination>
-                        <Pagination.Prev />
-                        <Pagination.Next />
+                        <Pagination.Item
+                            disabled={page == 1}
+                            onClick={() => setPage(page - 1)}
+                        >
+                            Previous Page
+                        </Pagination.Item>
+                        <Pagination.Item
+                            onClick={() => setPage(page + 1)}
+                            disabled={page * 25 >= count}
+                        >
+                            Next Page
+                        </Pagination.Item>
                     </Pagination>
                     {content.map((arr, index) => (
                         <div key={index}>
