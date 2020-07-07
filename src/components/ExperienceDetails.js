@@ -7,18 +7,22 @@ const ExperienceDetails = () => {
   const [exp, setExp] = useState(null);
   const { id } = useParams;
 
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+
   useEffect(() => {
     async function fetchData() {
-      const data = await fetch(`${process.env.BACKEND_URL}/experiences/${id}`)
-      const result = await data.json()
-      setExp(result)
+      let url = proxyurl +
+      "https://airbnb-gr1-backend.herokuapp.com/experiences"
+      const data = await fetch(`${url}/experiences/${id}`);
+      const result = await data.json();
+      setExp(result.data);
     }
 
-    fetchData()
-  }, [])
+    fetchData();
+  }, []);
 
-  if(!exp) {
-    return <div>Loading...</div>
+  if (!exp) {
+    return <div>Loading...</div>;
   }
 
   return (
@@ -103,7 +107,7 @@ const ExperienceDetails = () => {
         </Container>
       </div>
     </div>
-  );
+  ); 
 };
 
 export default ExperienceDetails;
