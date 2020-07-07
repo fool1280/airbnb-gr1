@@ -6,6 +6,9 @@ import ExperienceDetails from "./components/ExperienceDetails";
 import Login from "./components/Login";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import 'rheostat/initialize';
+import 'rheostat/css/rheostat.css';
+
 function App() {
     return (
         <Router>
