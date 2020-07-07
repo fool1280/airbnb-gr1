@@ -1,22 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { Button, Card, CardDeck, OverlayTrigger, Popover, Container, Row, Col  } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Experience from "./Experience"
-
-const proxyurl = "https://cors-anywhere.herokuapp.com/";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Popover from "react-bootstrap/Popover";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { Pagination } from "react-bootstrap";
 
 export default function ExperiencesList() {
-  const [exps, setExps] = useState(null);
-
-  useEffect(() => {
-    async function fetchData() {
-      let url =
-        proxyurl + "https://airbnb-gr1-backend.herokuapp.com/experiences";
-      const data = await fetch(url, {
-        method: "GET",
-      });
-      const result = await data.json();
-      setExps(result.data);
+    const [exps, setExps] = useState(null);
+    const [page, setPage] = useState(1);
+    const [count, setCount] = useState(null);
+    console.log(count);
+    useEffect(() => {
+        async function fetchData() {
+            let url = `https://cors-anywhere.herokuapp.com/https://airbnb-gr1-backend.herokuapp.com/experiences?page=${page}`;
+            const data = await fetch(url, {
+                method: "GET",
+            });
+            const result = await data.json();
+            console.log(result);
+            setCount(result.count);
+            setExps(result.data);
+        }
+        fetchData();
+    }, [page]);
+    if (!exps) {
+        return <div>Loading...</div>;
     }
     fetchData();
   }, []);
@@ -202,20 +213,39 @@ export default function ExperiencesList() {
           </OverlayTrigger>
         ))}
       </div>
-
-      <div>
-        <h2 className="thuong-text-popular">Popular now</h2>
-        {content.map((arr, index) => (
-          <div key={index}>
-            <div className="thuong-list-activities">
-              <CardDeck>
-                {arr.map((exp, indexExp) => (
-                  <Experience key={indexExp} {...exp}></Experience>
-                ))}
-              </CardDeck>
-            </div>
-          </div>
-        ))}
+      <div
+            <div>
+                <h2 className="thuong-text-popular">Popular now</h2>
+                <div className="d-flex flex-column align-items-center">
+                    <Pagination>
+                        <Pagination.Item
+                            disabled={page == 1}
+                            onClick={() => setPage(page - 1)}
+                        >
+                            Previous Page
+                        </Pagination.Item>
+                        <Pagination.Item
+                            onClick={() => setPage(page + 1)}
+                            disabled={page * 25 >= count}
+                        >
+                            Next Page
+                        </Pagination.Item>
+                    </Pagination>
+                    {content.map((arr, index) => (
+                        <div key={index}>
+                            <div className="thuong-list-activities">
+                                <CardDeck>
+                                    {arr.map((exp, indexExp) => (
+                                        <Experience
+                                            key={indexExp}
+                                            {...exp}
+                                        ></Experience>
+                                    ))}
+                                </CardDeck>
+                            </div>
+                        </div>
+                    ))}
+                </div>
         <div className="footer pb-3">
           <Container>
             <Row>
