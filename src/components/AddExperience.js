@@ -3,21 +3,21 @@ import { Container, Row, Col } from "react-bootstrap";
 import TagsInput from "react-tagsinput";
 
 const AddExperience = () => {
-    const [title, setTitle] = useState("");
-    const [desc, setDesc] = useState("");
-    const [category, setCategory] = useState("");
-    const [country, setCountry] = useState("");
-    const [groupSize, setGroupSize] = useState(null);
-    const [price, setPrice] = useState(null);
-    const [duration, setDuration] = useState(null);
-    const [pictureUrl, setPictureUrl] = useState("");
-    const [tags, setTags] = useState([]);
-    const [languages, setLanguages] = useState([]);
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
+  const [category, setCategory] = useState("");
+  const [country, setCountry] = useState("");
+  const [groupSize, setGroupSize] = useState(null);
+  const [price, setPrice] = useState(null);
+  const [duration, setDuration] = useState(null);
+  const [pictureUrl, setPictureUrl] = useState("");
+  const [tags, setTags] = useState([]);
+  const [languages, setLanguages] = useState([]);
 
-    const inputProps = {
-        placeholder: "Add a language",
-    };
-  
+  const inputProps = {
+    placeholder: "Add a language",
+  };
+
   const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
   const createExperience = async (e) => {
