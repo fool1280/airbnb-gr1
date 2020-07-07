@@ -6,8 +6,8 @@
 }
 
 .navCreate > img {
-    padding-right: 20px;
-    border-right: 2px solid #ececec;
+  padding-right: 20px;
+  border-right: 2px solid #ececec;
 }
 
 .thuong-bg-img {
@@ -22,8 +22,8 @@
 
 /* Position the navbar container inside the image */
 .thuong-container {
-    position: absolute;
-    width: 100%;
+	position: absolute;
+  width: 100%;
 }
 
 /* * {
@@ -83,15 +83,20 @@
     padding-bottom: 60px;
 }
 
+.detailRow {
+  margin-top: 30px;
+  padding-bottom: 60px;
+}
+
 .detailInfo {
     font-family: "Roboto", sans-serif;
     color: white;
 }
 
 .detailInfo > h3 {
-    padding-top: 10px;
-    font-size: 24px;
-    font-weight: 300;
+  padding-top: 10px;
+  font-size: 24px;
+  font-weight: 300;
 }
 
 /* The navbar */
@@ -227,8 +232,8 @@
 }
 
 .detailBadge {
-    padding: 10px 15px !important;
-    background-color: #262626 !important;
+  padding: 10px 15px !important;
+  background-color: #262626 !important;
 }
 
 .durationList {
@@ -344,4 +349,87 @@
     padding: 10px 40px;
     color: white;
     font-weight: 600;
+}
+=======
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.navDetails {
+  padding: 20px 0;
+}
+
+.loginBtnMainCol {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.loginBtnMain {
+  font-family: 'Roboto', sans-serif;
+  padding: 10px 20px;
+  background-color: #262626;
+  border: 1px solid #262626;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.loginNavSearch {
+  display: flex;
+  justify-content: center;
+}
+
+.loginNavSearch > input {
+  border-radius: 20px;
+  padding-left: 40px;
+  padding-right: 10px;
+  background-color: #262626;
+  border: 1px solid #262626;
+  color: white;
+}
+
+.loginNavSearch > span > i {
+  position: absolute;
+  padding-top: 16px;
+  padding-left: 20px;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.detailFooter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  padding: 20px 0; 
+}
+
+.detailFooterRow {
+  color: white;
+}
+
+.detailFooterLeftCol {
+  display: flex;
+  align-items: center;
+}
+
+.detailFooterLeftCol > h6 {
+  font-size: 14px;
+}
+
+.detailFooterRightCol {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.detailDateBtn {
+  margin-left: 20px;
+  background-color: #ff595e;
+  border: 1px solid #ff595e;
+  border-radius: 5px;
+  padding: 10px 40px;
+  color: white;
+  font-weight: 600;
 }
