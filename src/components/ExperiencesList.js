@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
     Button,
-    Card,
     CardDeck,
     OverlayTrigger,
     Popover,
@@ -17,9 +16,9 @@ export default function ExperiencesList() {
     const [exps, setExps] = useState(null);
     const [page, setPage] = useState(1);
     const [count, setCount] = useState(null);
-    console.log(count);
     useEffect(() => {
         async function fetchData() {
+            console.log(page);
             let url = `https://cors-anywhere.herokuapp.com/https://airbnb-gr1-backend.herokuapp.com/experiences?page=${page}`;
             const data = await fetch(url, {
                 method: "GET",
@@ -49,7 +48,6 @@ export default function ExperiencesList() {
         }
     }
     formatExps();
-    console.log(content);
     return (
         <div>
             <div className="thuong-bg-img">
@@ -255,7 +253,7 @@ export default function ExperiencesList() {
                 <div className="d-flex flex-column align-items-center">
                     <Pagination>
                         <Pagination.Item
-                            disabled={page == 1}
+                            disabled={page === 1}
                             onClick={() => setPage(page - 1)}
                         >
                             Previous Page
