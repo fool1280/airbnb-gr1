@@ -275,6 +275,7 @@
 
 .detailBadge {
   padding: 10px 15px !important;
+  margin-right: 10px;
   background-color: #262626 !important;
 }
 

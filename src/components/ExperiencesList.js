@@ -11,6 +11,8 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Pagination } from "react-bootstrap";
 import Experience from "./Experience";
+
+import { Link } from "react-router-dom"
  
 import Rheostat from "rheostat";
  
@@ -72,11 +74,7 @@ export default function ExperiencesList() {
       <div className="thuong-bg-img">
         <div className="thuong-container">
           <div className="thuong-topnav">
-            <a href="#home">Host your home</a>
-            <a href="#news">Host an experience</a>
-            <a href="#contact">Help</a>
-            <a href="#about">Log in</a>
-            <a href="#about">Sign up</a>
+            <Link to="/create">Create an experience</Link>
           </div>
         </div>
  
