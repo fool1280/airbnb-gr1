@@ -476,3 +476,7 @@
   color: white;
   font-weight: 600;
 }
+
+.expCard:hover {
+  cursor: pointer;
+}

@@ -18,6 +18,8 @@ const AddExperience = () => {
     placeholder: "Add a language",
   };
 
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+
   const createExperience = async (e) => {
     e.preventDefault();
     const experienceData = {
@@ -33,7 +35,7 @@ const AddExperience = () => {
       languages,
     };
     const newExperience = await fetch(
-      "https://cors-anywhere.herokuapp.com/https://airbnb-gr1-backend.herokuapp.com/experiences",
+      proxyurl + "https://airbnb-gr1-backend.herokuapp.com/experiences",
       {
         method: "POST",
         headers: {
@@ -108,6 +110,7 @@ const AddExperience = () => {
                   <option value="" disabled selected>
                     Choose country
                   </option>
+                  <option value="Italy">Italy</option>
                   <option value="Vietnam">Vietnam</option>
                   <option value="Korea">Korea</option>
                   <option value="Japan">Japan</option>
