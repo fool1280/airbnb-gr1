@@ -248,20 +248,22 @@ export default function ExperiencesList() {
 
             <div>
                 <h2 className="thuong-text-popular">Popular now</h2>
-                {content.map((arr, index) => (
-                    <div key={index}>
-                        <div className="thuong-list-activities">
-                            <CardDeck>
-                                {arr.map((exp, indexExp) => (
-                                    <Experience
-                                        key={indexExp}
-                                        {...exp}
-                                    ></Experience>
-                                ))}
-                            </CardDeck>
+                <div>
+                    {content.map((arr, index) => (
+                        <div key={index}>
+                            <div className="thuong-list-activities">
+                                <CardDeck>
+                                    {arr.map((exp, indexExp) => (
+                                        <Experience
+                                            key={indexExp}
+                                            {...exp}
+                                        ></Experience>
+                                    ))}
+                                </CardDeck>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
                 <div className="footer pb-3">
                     <Container>
                         <Row>
