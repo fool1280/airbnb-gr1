@@ -7,7 +7,7 @@ export default function Experience({ ...exp }) {
     let history = useHistory();
 
     const expSelect = () => {
-        history.push(`/experiences/${exp.id}`);
+        history.push(`/experiences/${exp._id}`);
     };
 
     return (

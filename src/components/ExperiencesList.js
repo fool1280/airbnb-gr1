@@ -11,9 +11,9 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Pagination } from "react-bootstrap";
 import Experience from "./Experience";
-
+ 
 import Rheostat from "rheostat";
-
+ 
 export default function ExperiencesList() {
   const [exps, setExps] = useState(null);
   const [page, setPage] = useState(1);
@@ -56,17 +56,17 @@ export default function ExperiencesList() {
   }
   formatExps();
   console.log(content);
-
+ 
   const handleChange = (e) => {
     setMinPrice(e.values[0]);
     setMaxPrice(e.values[1]);
   };
-
+ 
   const handleValuesUpdated = (e) => {
     setTempMinPrice(e.values[0]);
     setTempMaxPrice(e.values[1]);
   };
-
+ 
   return (
     <div>
       <div className="thuong-bg-img">
@@ -79,7 +79,7 @@ export default function ExperiencesList() {
             <a href="#about">Sign up</a>
           </div>
         </div>
-
+ 
         <div className="thuong-tagline">
           <span className="thuong-tag1"> Online Experiences </span>
           <span className="thuong-tag2">
@@ -89,7 +89,7 @@ export default function ExperiencesList() {
           </span>
         </div>
       </div>
-
+ 
       <div className="thuong-list">
         {["bottom"].map((placement) => (
           <OverlayTrigger
@@ -121,7 +121,7 @@ export default function ExperiencesList() {
           </OverlayTrigger>
         ))}
       </div>
-
+ 
       <div className="thuong-list">
         {["bottom"].map((placement) => (
           <OverlayTrigger
@@ -138,7 +138,7 @@ export default function ExperiencesList() {
           </OverlayTrigger>
         ))}
       </div>
-
+ 
       <div className="thuong-list">
         {["bottom"].map((placement) => (
           <OverlayTrigger
@@ -182,7 +182,7 @@ export default function ExperiencesList() {
           </OverlayTrigger>
         ))}
       </div>
-
+ 
       <div className="thuong-list">
         {["bottom"].map((placement) => (
           <OverlayTrigger
@@ -214,7 +214,7 @@ export default function ExperiencesList() {
           </OverlayTrigger>
         ))}
       </div>
-
+ 
       <div className="priceSlider">
         <div>
           <h3>Price Range:</h3>
@@ -239,7 +239,7 @@ export default function ExperiencesList() {
           />
         </div>
       </div>
-
+ 
       <div>
         <h2 className="thuong-text-popular">Popular now</h2>
         <div className="d-flex flex-column align-items-center">
@@ -307,16 +307,3 @@ export default function ExperiencesList() {
     </div>
   );
 }
-
-// const Experience = ({ title, pictureUrl, country, duration, price }) => (
-//     <Card>
-//         <Card.Img variant="top" src={pictureUrl} />
-//         <Card.Body>
-//             <Card.Title>{title}</Card.Title>
-//             <Card.Title>{country}</Card.Title>
-
-//             <Card.Text>Starting from ${price}</Card.Text>
-//             <Card.Text>{duration} hours</Card.Text>
-//         </Card.Body>
-//     </Card>
-// );
