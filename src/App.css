@@ -350,6 +350,8 @@
     color: white;
     font-weight: 600;
 }
+
+.detailDesc > p {
   margin-top: 15px;
   font-size: 18px;
 }
