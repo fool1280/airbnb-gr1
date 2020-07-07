@@ -25,7 +25,7 @@ const ExperienceDetails = () => {
         </Row>
         <Row className="detailRow">
           <Col>
-            <img src="https://a0.muscache.com/im/pictures/lombard/MtTemplate-1746293-media_library/original/75578928-27fe-4055-bc50-5ee36ffae190.jpeg?aki_policy=exp_md" />
+            <img src="https://a0.muscache.com/im/pictures/lombard/MtTemplate-1746293-media_library/original/75578928-27fe-4055-bc50-5ee36ffae190.jpeg?aki_policy=exp_md"/>
           </Col>
           <Col className="detailInfo">
             <h1>Michelin Star Chef - Christina Bowerman</h1>
