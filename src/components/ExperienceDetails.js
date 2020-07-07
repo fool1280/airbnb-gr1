@@ -90,7 +90,7 @@ const ExperienceDetails = () => {
                                 <div>
                                     <span>Hosted in</span>
                                     <br />
-                                    <span>{exp.language}</span>
+                                    {exp.language}
                                 </div>
                             </li>
                         </ul>
