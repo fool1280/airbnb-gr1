@@ -37,6 +37,11 @@
     font-weight: 300;
 }
 
+.formDiv {
+  display: flex;
+  justify-content: center;
+}
+
 .createForm {
     width: 50%;
     margin-top: 20px;
@@ -61,6 +66,43 @@
 
 .priceRow {
     margin-top: 20px;
+}
+
+.react-tagsinput {
+  border: 0.5px solid rgb(118, 118, 118);
+  border-radius: 2px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.react-tagsinput-tag {
+  margin-right: 10px;
+  padding: 5px 15px;
+  background-color: #646464;
+  border: 1px solid #646464;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.react-tagsinput-remove {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.react-tagsinput-tag a::before {
+  content: " ×";
+}
+
+.react-tagsinput-input {
+  border: none;
+  outline: none;
+}
+
+.createBtnDiv {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .createBtn {
@@ -403,7 +445,7 @@
   bottom: 0;
   width: 100%;
   background-color: black;
-  padding: 20px 0; 
+  padding: 10px 0; 
 }
 
 .detailFooterRow {

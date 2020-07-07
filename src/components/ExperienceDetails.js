@@ -1,9 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom"
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 import { Container, Row, Col, Badge } from "react-bootstrap";
 
 const ExperienceDetails = () => {
+  const [exp, setExp] = useState(null);
+  const { id } = useParams;
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await fetch(`${process.env.BACKEND_URL}/experiences/${id}`)
+      const result = await data.json()
+      setExp(result)
+    }
+
+    fetchData()
+  }, [])
+
+  if(!exp) {
+    return <div>Loading...</div>
+  }
+
   return (
     <div className="detailBody">
       <Container>
@@ -25,22 +42,25 @@ const ExperienceDetails = () => {
         </Row>
         <Row className="detailRow">
           <Col>
-            <img src="https://a0.muscache.com/im/pictures/lombard/MtTemplate-1746293-media_library/original/75578928-27fe-4055-bc50-5ee36ffae190.jpeg?aki_policy=exp_md"/>
+            <img src={exp.pictureUrl} />
           </Col>
           <Col className="detailInfo">
-            <h1>Michelin Star Chef - Christina Bowerman</h1>
-            <h3>Italy</h3>
+            <h1>{exp.title}</h1>
+            <h3>{exp.country}</h3>
             <div className="detailBadgeList">
-              <Badge variant="secondary" className="detailBadge">
-                COOKING
-              </Badge>
+              {exp.tags.map((tag) => (
+                <Badge variant="secondary" className="detailBadge">
+                  {tag}
+                </Badge>
+              ))}
             </div>
             <ul className="durationList">
               <li>
                 <i class="fas fa-clock"></i>
                 <div>
                   <span>Duration</span>
-                  <br />1 hour
+                  <br />
+                  {exp.duration} hour
                 </div>
               </li>
               <li>
@@ -48,7 +68,7 @@ const ExperienceDetails = () => {
                 <div>
                   <span>Group size</span>
                   <br />
-                  Up to 10 people
+                  Up to {exp.groupSize} people
                 </div>
               </li>
               <li>
@@ -56,22 +76,15 @@ const ExperienceDetails = () => {
                 <div>
                   <span>Hosted in</span>
                   <br />
-                  English, Italian
+                  {exp.languages.map((language) => (
+                    <span>{language}</span>
+                  ))}
                 </div>
               </li>
             </ul>
             <div className="detailDesc">
               <h2>What you'll do</h2>
-              <p>
-                Chef Cristina Bowerman is not your typical Italian chef. You're
-                about to meet the woman that revolutionized (and modernized)
-                Roman haute cuisine herself! Her cooking style opens up a
-                conversation between modernity and tradition; she has figured
-                out a way of mixing her background as a designer, and her
-                travels around the world in order to bring back to Rome a
-                fresher, funkier and funnier approach to the Roman traditional
-                cuisine that she so deeply loves at Glass Hostaria.
-              </p>
+              <p>{exp.description}</p>
             </div>
           </Col>
         </Row>
@@ -80,10 +93,10 @@ const ExperienceDetails = () => {
         <Container>
           <Row className="detailFooterRow">
             <Col className="detailFooterLeftCol">
-              <h6>Michelin Star Chef - Christina Bowerman</h6>
+              <h6>{exp.title}</h6>
             </Col>
             <Col className="detailFooterRightCol">
-              <span>From $70/person</span>
+              <span>From ${exp.price}/person</span>
               <button className="detailDateBtn">See Dates</button>
             </Col>
           </Row>
