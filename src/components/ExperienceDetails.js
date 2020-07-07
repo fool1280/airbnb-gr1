@@ -58,13 +58,13 @@ const ExperienceDetails = () => {
                         <h1>{exp.title}</h1>
                         <h3>{exp.country}</h3>
                         <div className="detailBadgeList">
-                            {exp.tags.map((tag, index) => (
+                            {exp.tags.map((i, index) => (
                                 <Badge
                                     variant="secondary"
                                     className="detailBadge"
                                     key={index}
                                 >
-                                    {tag}
+                                    {i.tag}
                                 </Badge>
                             ))}
                         </div>
