@@ -32,13 +32,16 @@ const AddExperience = () => {
       tags,
       languages,
     };
-    const newExperience = await fetch("http://localhost:3000/experiences", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(experienceData),
-    });
+    const newExperience = await fetch(
+      "https://cors-anywhere.herokuapp.com/https://airbnb-gr1-backend.herokuapp.com/experiences",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(experienceData),
+      }
+    );
     alert("Yay! Experience created!");
   };
 

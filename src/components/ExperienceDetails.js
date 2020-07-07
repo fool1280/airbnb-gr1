@@ -13,7 +13,7 @@ const ExperienceDetails = () => {
       const result = await data.json()
       setExp(result)
     }
-    
+
     fetchData()
   }, [])
 

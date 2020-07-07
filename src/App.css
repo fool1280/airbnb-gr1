@@ -1,8 +1,8 @@
 .navCreate {
-  display: flex;
-  align-items: center;
-  font-family: 'Roboto', sans-serif;
-  padding: 10px 0;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    padding: 10px 0;
 }
 
 .navCreate > img {
@@ -11,13 +11,13 @@
 }
 
 .thuong-bg-img {
-	background-image: url("https://images.squarespace-cdn.com/content/v1/5dfbe1b879e00e7ea2ded3a5/1590448648533-7LXMTN5SC50VPPOXJQ63/ke17ZwdGBToddI8pDm48kHhmc2ayRjfkqzzA3BlTcpx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UfiyOED3tH8_ODs9gahxcdtuvKSGkJKZsqbSNqI2pGLwOkP6OPUJ_r7YU8TZ7Q11dw/topbanner-ipad.jpg?format=2500w");
-	height: 680px;
-	/* Center and scale the image nicely */
-	background-position: center;
-	background-repeat: no-repeat;
-	/* Needed to position the navbar */
-	position: relative;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5dfbe1b879e00e7ea2ded3a5/1590448648533-7LXMTN5SC50VPPOXJQ63/ke17ZwdGBToddI8pDm48kHhmc2ayRjfkqzzA3BlTcpx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UfiyOED3tH8_ODs9gahxcdtuvKSGkJKZsqbSNqI2pGLwOkP6OPUJ_r7YU8TZ7Q11dw/topbanner-ipad.jpg?format=2500w");
+    height: 680px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Needed to position the navbar */
+    position: relative;
 }
 
 /* Position the navbar container inside the image */
@@ -31,10 +31,10 @@
 } */
 
 .navCreate > span {
-  padding-left: 20px;
-  color: #646464;
-  font-size: 16px;
-  font-weight: 300;
+    padding-left: 20px;
+    color: #646464;
+    font-size: 16px;
+    font-weight: 300;
 }
 
 .formDiv {
@@ -43,29 +43,29 @@
 }
 
 .createForm {
-  width: 50%;
-  margin-top: 20px;
+    width: 50%;
+    margin-top: 20px;
 }
 
 .createForm > h1 {
-  font-size: 28px;
-  font-weight: 600;
+    font-size: 28px;
+    font-weight: 600;
 }
 
 .createLabel {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .createInput {
-  width: 100%;
+    width: 100%;
 }
 
 .categoryRow {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .priceRow {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .react-tagsinput {
@@ -106,18 +106,23 @@
 }
 
 .createBtn {
-  margin: 20px 0;
-  padding: 10px 20px;
-  background: #ff595e;
-  border: 1px solid #ff595e;
-  border-radius: 5px;
-  color: white;
-  font-weight: 600;
+    margin: 30px 0;
+    padding: 10px 20px;
+    background: #ff595e;
+    border: 1px solid #ff595e;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
 }
 
 .detailBody {
-  background-color: black;
-  height: 100%;
+    background-color: black;
+    height: 100%;
+}
+
+.detailRow {
+    margin-top: 30px;
+    padding-bottom: 60px;
 }
 
 .detailRow {
@@ -126,8 +131,8 @@
 }
 
 .detailInfo {
-  font-family: 'Roboto', sans-serif;
-  color: white;
+    font-family: "Roboto", sans-serif;
+    color: white;
 }
 
 .detailInfo > h3 {
@@ -138,134 +143,134 @@
 
 /* The navbar */
 .thuong-topnav {
-	overflow: hidden;
-	float: right;
-	padding-right: 50px;
-	text-decoration: none;
+    overflow: hidden;
+    float: right;
+    padding-right: 50px;
+    text-decoration: none;
 }
 
 /* Navbar links */
 .thuong-topnav a {
-	float: left;
-	color: #f2f2f2;
-	margin-top: 20px;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none !important;
-	font-size: 17px;
+    float: left;
+    color: #f2f2f2;
+    margin-top: 20px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none !important;
+    font-size: 17px;
 }
 
 .thuong-topnav a:hover {
-	background-color: #ddd;
-	color: black;
-	border-radius: 50px;
+    background-color: #ddd;
+    color: black;
+    border-radius: 50px;
 }
 .thuong-tag1 {
-	font-size: 88px;
-	position: absolute;
-	margin-top: 100px;
-	color: white;
-	line-height: 1.03;
+    font-size: 88px;
+    position: absolute;
+    margin-top: 100px;
+    color: white;
+    line-height: 1.03;
 }
 .thuong-tag2 {
-	font-size: 38px;
-	position: absolute;
-	margin-top: 300px;
-	color: white;
+    font-size: 38px;
+    position: absolute;
+    margin-top: 300px;
+    color: white;
 }
 .thuong-tagline {
-	position: absolute;
-	top: 20px;
-	left: 66px;
-	width: 500px;
+    position: absolute;
+    top: 20px;
+    left: 66px;
+    width: 500px;
 }
 .thuong-list {
-	display: inline-block;
-	color: #f2f2f2;
-	margin-top: 20px;
-	text-align: center;
-	padding: 5px 10px;
-	text-decoration: none;
-	font-size: 17px;
-	padding-left: 40px;
+    display: inline-block;
+    color: #f2f2f2;
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 17px;
+    padding-left: 40px;
 }
 .thuong-list button {
-	background-color: rgb(255, 255, 255);
-	color: black;
-	border-radius: 40px;
-	border-color: rgb(177, 177, 177);
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 40px;
+    border-color: rgb(177, 177, 177);
 }
 
 .thuong-list button:hover {
-	background-color: white;
-	color: black;
-	border-radius: 50px;
-	border-color: rgb(17, 9, 8);
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    border-color: rgb(17, 9, 8);
 }
 .footer {
-	padding-top: 20px;
-	display: list-item;
-	font-weight: bold;
-	text-align: -webkit-match-parent;
-	background-color: rgb(245, 245, 245);
+    padding-top: 20px;
+    display: list-item;
+    font-weight: bold;
+    text-align: -webkit-match-parent;
+    background-color: rgb(245, 245, 245);
 }
 .footer h3 {
-	font-size: 14px;
-	line-height: 1.43;
-	font-family: inherit;
-	font-variant: inherit;
-	text-decoration: none;
-	color: #222222;
-	line-height: 18px;
+    font-size: 14px;
+    line-height: 1.43;
+    font-family: inherit;
+    font-variant: inherit;
+    text-decoration: none;
+    color: #222222;
+    line-height: 18px;
 }
 .footer h2 {
-	font-size: 14px;
-	line-height: 1.43;
-	font-family: inherit;
-	font-weight: inherit;
-	font-style: inherit;
-	font-variant: inherit;
-	text-decoration: none;
-	color: #222222;
-	line-height: 18px;
+    font-size: 14px;
+    line-height: 1.43;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    text-decoration: none;
+    color: #222222;
+    line-height: 18px;
 }
 .thuong-list-activities {
-	padding-left: 40px;
-	padding-right: 40px;
-	padding-bottom: 40px;
-	font-size: 14px;
-	line-height: 1.43;
-	font-family: inherit;
-	font-weight: inherit;
-	font-style: inherit;
-	font-variant: inherit;
-	text-decoration: none;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    font-size: 14px;
+    line-height: 1.43;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    text-decoration: none;
 }
 .thuong-text-popular {
-	padding-left: 40px;
-	padding-right: 40px;
-	margin-top: 10px;
-	padding-bottom: 20px;
-	font-size: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    font-size: 30px;
 }
 .thuong-list-detail {
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-top: 10px;
-	padding-bottom: 10px;
-	font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
 }
 .check-box {
-	padding-left: 10px;
+    padding-left: 10px;
 }
 
 .check-box1 {
-	padding-left: 20px;
-	font-style: italic;
+    padding-left: 20px;
+    font-style: italic;
 }
 
 .detailBadgeList {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .detailBadge {
@@ -274,34 +279,118 @@
 }
 
 .durationList {
-  display: inline-flex;
-  list-style-type: none;
-  padding-left: 0;
-  margin-top: 40px;
+    display: inline-flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 40px;
 }
 
 .durationList > li {
-  margin-right: 40px;
-  font-size: 16px;
-  color: white;
+    margin-right: 40px;
+    font-size: 16px;
+    color: white;
 }
 
 .durationList > li > i {
-  margin-bottom: 15px;
-  color: #A7A7A7;
+    margin-bottom: 15px;
+    color: #a7a7a7;
 }
 
 .durationList > li > div > span {
-  color: #A7A7A7;
+    color: #a7a7a7;
 }
 
 .detailDesc {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .detailDesc > h2 {
-  font-size: 40px;
-  font-weight: 600;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.detailDesc > p {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.navDetails {
+    padding: 20px 0;
+}
+
+.loginBtnMainCol {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.loginBtnMain {
+    font-family: "Roboto", sans-serif;
+    padding: 10px 20px;
+    background-color: #262626;
+    border: 1px solid #262626;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.loginNavSearch {
+    display: flex;
+    justify-content: center;
+}
+
+.loginNavSearch > input {
+    border-radius: 20px;
+    padding-left: 40px;
+    padding-right: 10px;
+    background-color: #262626;
+    border: 1px solid #262626;
+    color: white;
+}
+
+.loginNavSearch > span > i {
+    position: absolute;
+    padding-top: 16px;
+    padding-left: 20px;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.detailFooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    padding: 20px 0;
+}
+
+.detailFooterRow {
+    color: white;
+}
+
+.detailFooterLeftCol {
+    display: flex;
+    align-items: center;
+}
+
+.detailFooterLeftCol > h6 {
+    font-size: 14px;
+}
+
+.detailFooterRightCol {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.detailDateBtn {
+    margin-left: 20px;
+    background-color: #ff595e;
+    border: 1px solid #ff595e;
+    border-radius: 5px;
+    padding: 10px 40px;
+    color: white;
+    font-weight: 600;
 }
 
 .detailDesc > p {
@@ -387,4 +476,3 @@
   color: white;
   font-weight: 600;
 }
-
